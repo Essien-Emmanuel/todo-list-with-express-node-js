@@ -1,0 +1,16 @@
+<%- include('headers') %>
+
+        <h1><%= ListTitle %></h1>
+
+        <ul>
+            <% newListItems.forEach((item, index) => { %>
+                <li><%= item %></li>
+            <% })%>
+        </ul>
+        
+        <form action = '/' method = 'POST'>
+            <input type = 'text' name = 'newItem' placeholder = 'New Item' required autofocused>
+            <button type = 'submit' name = 'listTitle' value = <%= ListTitle %>>+</button>
+        </form>
+  
+<%- include('footers') %>
