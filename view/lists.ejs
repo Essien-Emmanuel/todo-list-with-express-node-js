@@ -2,11 +2,17 @@
 
         <h1><%= ListTitle %></h1>
 
-        <ul>
+        <ul class = 'listStyleType'>
             <% newListItems.forEach((item, index) => { %>
-                <li><%= item %></li>
+                <li>
+                    <div class = 'listContainer'>
+                        <input type = 'checkbox'>
+                        <p><%= item %></p>
+                    </div>
+                </li>
             <% })%>
         </ul>
+
         
         <form action = '/' method = 'POST'>
             <input type = 'text' name = 'newItem' placeholder = 'New Item' required autofocused>

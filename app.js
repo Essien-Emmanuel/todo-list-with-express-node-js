@@ -17,7 +17,7 @@ const workItem = [];
 
 app.get("/", (req, res) => {
   const day = date.getDate();
-
+  const taskdone = false;
   res.render("lists", {
     ListTitle: day,
     newListItems: items,
